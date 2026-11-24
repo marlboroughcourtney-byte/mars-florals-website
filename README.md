@@ -94,10 +94,4 @@ it (for example with Nodemailer) is marked `TODO` in `server.js`.
 - Freelance removed as a service (home page card, pricing section, form option, server check)
 - Hero slideshow and FAQ search removed to keep pages simple
 
-## To confirm with Shannon (client content)
 
-- [ ] All prices in `pricing.html`, including the Classic bouquet ($65)
-- [ ] Wedding minimum spend: pricing says $999, the FAQ says $1000
-- [ ] FAQ details: notice periods, 30% deposit, 3-day reply time
-- [ ] Email address `marsflorals@outlook.com`
-- [ ] Full-resolution photos. The current images are cropped from Instagram screenshots and are low-res.
