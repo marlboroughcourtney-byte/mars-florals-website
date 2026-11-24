@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing | Mars Florals</title>
+  <meta name="description" content="Starting prices for wedding, event and bouquet florals by Mars Florals, Perth.">
+  <link rel="icon" href="images/logo.png">
+  <!-- Bootstrap 5 (CDNJS) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <!-- Brand fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Caveat:wght@700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="visually-hidden-focusable position-absolute p-2 bg-white" href="#main">Skip to content</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar navbar-expand-lg mf-nav sticky-top" aria-label="Main">
+    <div class="container-fluid mf-gutter">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="">
+        <span>Mars Florals</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="enquire.html">Enquire</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/mars.florals" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- ===== PAGE HEADER ===== -->
+    <section class="mf-gutter pt-3 pt-md-4">
+      <h1 class="mf-display mf-page-title">Pricing</h1>
+      <div class="mf-ruled mf-eyebrow mt-3">
+        <span>Weddings</span><span>Events</span><span>Bouquets</span><span>Freelance</span>
+      </div>
+    </section>
+
+    <section class="mf-gutter py-5">
+      <div class="row g-5 align-items-end">
+        <div class="col-lg-7 ps-lg-5">
+          <p class="mf-lede m-0">Every design is made for you, so please use these as a guide.</p>
+        </div>
+        <div class="col-lg-5">
+          <p class="m-0">Prices depend on the season, the flowers you love and the scale of your day. Send an enquiry and Shannon will come back with ideas and a tailored quote.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mf-gutter pb-5" aria-label="Packages">
+      <!-- FILTER: show one service at a time (js/pricing.js) -->
+      <div class="mf-filter-bar mb-4" data-filter-bar>
+        <div class="mf-filter" role="group" aria-label="Show packages for">
+          <button type="button" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" data-filter="weddings" aria-pressed="false">Weddings</button>
+          <button type="button" data-filter="events" aria-pressed="false">Events</button>
+          <button type="button" data-filter="bouquets" aria-pressed="false">Bouquets</button>
+        </div>
+        <p class="visually-hidden" data-filter-status aria-live="polite"></p>
+      </div>
+
+      <!-- WEDDINGS -->
+      <div class="mf-price-group mb-5 pb-4" id="weddings" data-group="weddings">
+        <div class="row g-4 mb-4 align-items-end">
+          <div class="col-md-4 pt-5"><img src="images/bride-window.jpg" alt="Bride holding a white bouquet beside a vineyard window" class="w-100" style="aspect-ratio: 4 / 3; object-fit: cover;"></div>
+          <div class="col-md-8"><h2 class="mf-display m-0" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">Weddings</h2></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <article class="mf-price-card">
+              <h3>Elopement</h3>
+               <p class="mf-price m-0" style="font-size: small;">from</p>
+              <p class="mf-price m-0">$299 <small></small></p>
+              <p class="m-0">For two (and maybe a witness or two). Big feeling, small guest list.</p>
+              <button class="mf-toggle" type="button" aria-expanded="false" aria-controls="inc-elope">What's included</button>
+              <ul class="mf-includes" id="inc-elope" hidden>
+                <li>Bridal bouquet</li>
+                <li>Matching buttonhole</li>
+                <li>Consultation by phone or video</li>
+              </ul>
+              <a class="mf-textlink mt-auto" href="enquire.html?type=wedding">Enquire &rarr;</a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="mf-price-card">
+             
+              <h3>The Cool Bride</h3>
+               <p class="mf-price m-0" style="font-size: small;">from</p>
+              <p class="mf-price m-0">$499 <small></small></p>
+              <p class="m-0">Personal flowers for you and your crew, designed around one bold idea.</p>
+              <button class="mf-toggle" type="button" aria-expanded="false" aria-controls="inc-cool">What's included</button>
+              <ul class="mf-includes" id="inc-cool" hidden>
+                <li>Bridal bouquet</li>
+                <li>Bridesmaid bouquets (up to 3)</li>
+                <li>Buttonholes (up to 3)</li>
+                <li>In-person consultation and mood board</li>
+                <li>Delivery on the day</li>
+              </ul>
+              <a class="mf-textlink mt-auto" href="enquire.html?type=wedding">Enquire &rarr;</a>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <article class="mf-price-card">
+              <h3>Full Wedding</h3>
+               <p class="mf-price m-0" style="font-size: small;">from</p>
+              <p class="mf-price m-0">$999 <small>minimum spend</small></p>
+              <p class="m-0">Ceremony to reception: personal flowers, styling and statement pieces.</p>
+              <button class="mf-toggle" type="button" aria-expanded="false" aria-controls="inc-full">What's included</button>
+              <ul class="mf-includes" id="inc-full" hidden>
+                <li>Everything in The Cool Bride</li>
+                <li>Ceremony arbour or aisle florals</li>
+                <li>Reception table centrepieces</li>
+                <li>Bump-in and pack-down at your venue</li>
+                <li>Site visit</li>
+              </ul>
+              <a class="mf-textlink mt-auto" href="enquire.html?type=wedding">Enquire &rarr;</a>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENTS -->
+      <div class="mf-price-group mb-5 pb-4" id="events" data-group="events">
+        <div class="row g-4 mb-4 align-items-end">
+          <div class="col-md-4 pt-5"><img src="images/event-white.jpg" alt="White roses, orchids and anthuriums with trailing greenery, installed on a rooftop pergola" class="w-100" style="aspect-ratio: 4 / 3; object-fit: cover;"></div>
+          <div class="col-md-8"><h2 class="mf-display m-0" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">Events</h2></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <article class="mf-price-card">
+              <h3>Tablescapes</h3>
+              <p class="mf-price m-0" style="font-size: small;">from</p>
+              <p class="mf-price m-0">$65 <small>per table</small></p>
+              <p class="m-0">Low, layered florals for long lunches, dinners and celebrations.</p>
+              <button class="mf-toggle" type="button" aria-expanded="false" aria-controls="inc-table">What's included</button>
+              <ul class="mf-includes" id="inc-table" hidden>
+                <li>Design consultation</li>
+                <li>Vessels on hire</li>
+                <li>Set-up and pack-down</li>
+              </ul>
+              <a class="mf-textlink mt-auto" href="enquire.html?type=event">Enquire &rarr;</a>
+            </article>
+          </div>
+          <div class="col-md-6">
+            <article class="mf-price-card">
+              <h3>Statement Pieces</h3>
+              <p class="mf-price m-0" style="font-size: small;">from</p>
+              <p class="mf-price m-0">$300 <small></small></p>
+              <p class="m-0">One big floral moment for a launch, bar, entrance or photo wall.</p>
+              <button class="mf-toggle" type="button" aria-expanded="false" aria-controls="inc-statement">What's included</button>
+              <ul class="mf-includes" id="inc-statement" hidden>
+                <li>Concept and mood board</li>
+                <li>Install and removal</li>
+                <li>Site visit if needed</li>
+              </ul>
+              <a class="mf-textlink mt-auto" href="enquire.html?type=event">Enquire &rarr;</a>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOUQUETS -->
+      <div class="mf-price-group mb-5 pb-4" id="bouquets" data-group="bouquets">
+        <div class="row g-4 mb-4 align-items-end">
+          <div class="col-md-4 pt-5"><img src="images/iris-bouquet.jpg" alt="Bouquet of hot-pink and peach roses, peach orchids, protea and burgundy snapdragons" class="w-100" style="aspect-ratio: 4 / 3; object-fit: cover;"></div>
+          <div class="col-md-8"><h2 class="mf-display m-0" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">Bouquets</h2></div>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <article class="mf-price-card">
+              <h3>Petite</h3>
+              <p class="mf-price m-0" style="font-size: small;">from</p>
+              <p class="mf-price m-0">$35</p>
+              <p class="m-0">A sweet seasonal handful. Perfect for a thank-you.</p>
+              <a class="mf-textlink mt-auto" href="enquire.html?type=bouquet">Order &rarr;</a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="mf-price-card">
+              <h3>Classic</h3>
+               <p class="mf-price m-0" style="font-size: small;">from</p>
+              <p class="mf-price m-0">$65</p>
+              <p class="m-0">A generous, colourful bouquet for birthdays and big news.</p>
+              <a class="mf-textlink mt-auto" href="enquire.html?type=bouquet">Order &rarr;</a>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="mf-price-card">
+              <h3>Statement</h3>
+               <p class="mf-price m-0" style="font-size: small;">from</p>
+              <p class="mf-price m-0">$95</p>
+              <p class="m-0">Go big. Lots of stems, lots of drama.</p>
+              <a class="mf-textlink mt-auto" href="enquire.html?type=bouquet">Order &rarr;</a>
+            </article>
+          </div>
+        </div>
+        <p class="mt-4 mb-0 mf-sans" style="font-size: 1rem;">Delivery around Perth: $10</p>
+      </div>
+
+      <!-- FREELANCE -->
+      
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="mf-blush mf-gutter py-5">
+      <div class="row g-4 py-lg-4 align-items-center">
+        <div class="col-lg-8"><h2 class="mf-display m-0" style="font-size: clamp(2.5rem, 5.4vw, 2rem);">Not sure what you need?</h2></div>
+        <div class="col-lg-4 d-flex flex-wrap gap-3 justify-content-lg-end">
+          <a class="btn-mf-berry" href="enquire.html">Ask for a quote</a>
+          <a class="btn-mf-outline" href="faq.html">Read the FAQ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="mf-footer mf-gutter py-4">
+    <div class="d-flex flex-wrap justify-content-between gap-4">
+      <p class="m-0" style="max-width: 35rem; line-height: 1.5;">Mars Florals works on Whadjuk Noongar boodja. We pay our respects to Elders past and present, and acknowledge that sovereignty was never ceded.</p>
+      <nav aria-label="Footer" class="d-flex flex-wrap column-gap-4 align-items-start">
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="enquire.html">Enquire</a>
+        <a href="https://www.instagram.com/mars.florals" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:marsflorals@outlook.com">Email</a>
+        <span class="py-2">&copy; <span data-year>2026</span> Mars Florals</span>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/pricing.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+# Dependencies
+node_modules/
+
+# macOS Finder files
+.DS_Store
+
+# Enquiries saved by server.js contain customers' personal details.
+# The folder is kept (data/.gitkeep); server.js creates enquiries.json on the first enquiry.
+data/*
+!data/.gitkeep
+
+# Logs and local environment files
+npm-debug.log*
+*.log
+.env

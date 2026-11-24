@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enquire | Mars Florals</title>
+  <meta name="description" content="Send an enquiry to Mars Florals for wedding, event and bouquet flowers in Perth. Now booking 2027.">
+  <link rel="icon" href="images/logo.png">
+  <!-- Bootstrap 5 (CDNJS) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <!-- Brand fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=Caveat:wght@700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="visually-hidden-focusable position-absolute p-2 bg-white" href="#main">Skip to content</a>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar navbar-expand-lg mf-nav sticky-top" aria-label="Main">
+    <div class="container-fluid mf-gutter">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" alt="">
+        <span>Mars Florals</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Open menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="enquire.html">Enquire</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/mars.florals" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <section class="mf-gutter pt-3 pt-md-4">
+      <h1 class="mf-display mf-page-title">Enquire</h1>
+      <div class="mf-ruled mf-eyebrow mt-3">
+        <span>Now booking 2027</span><span>marsflorals@outlook.com</span>
+      </div>
+    </section>
+
+    <section class="mf-blush mf-gutter py-5 mt-5">
+      <div class="row g-5 py-lg-4">
+        <!-- Intro -->
+        <div class="col-lg-4">
+          <div class="mf-sticky d-flex flex-column gap-4">
+            <h2 class="mf-display m-0" style="font-size: clamp(2.5rem, 3.2vw, 3.25rem); overflow-wrap: anywhere;">Let's make it unforgettable</h2>
+            <p class="m-0" style="font-size: 1.25rem;">Tell me about your day and I'll come back with ideas and a quote. The more you share, the better I can picture it.</p>
+            <img src="images/bride-veil-arm.jpg" alt="Bride lifting her lace-edged veil and holding a white bouquet, with vineyards behind her" class="w-100 d-none d-lg-block" style="aspect-ratio: 4 / 5; object-fit: cover;">
+            <p class="m-0 mf-sans" style="font-size: 1rem;">Prefer email? <a href="mailto:marsflorals@outlook.com">marsflorals@outlook.com</a><br>Or DM <a href="https://www.instagram.com/mars.florals" target="_blank" rel="noopener">@mars.florals</a> on Instagram.</p>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="col-lg-8">
+          <form id="enquiry-form" class="mf-form mf-form-panel" novalidate>
+            <p class="mf-sans mb-4" style="font-size: .95rem;">Fields marked <span class="mf-req">*</span> are required.</p>
+            <div class="alert alert-danger mf-sans" role="alert" data-form-error hidden></div>
+
+            <div class="row g-4">
+              <!-- About you -->
+              <div class="col-md-6">
+                <label class="form-label" for="firstName">First name <span class="mf-req">*</span></label>
+                <input class="form-control" id="firstName" name="firstName" type="text" autocomplete="given-name" required>
+                <div class="invalid-feedback">Please enter your first name.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="lastName">Last name <span class="mf-req">*</span></label>
+                <input class="form-control" id="lastName" name="lastName" type="text" autocomplete="family-name" required>
+                <div class="invalid-feedback">Please enter your last name.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="email">Email <span class="mf-req">*</span></label>
+                <input class="form-control" id="email" name="email" type="email" autocomplete="email" required>
+                <div class="invalid-feedback">Please enter a valid email, like name@example.com.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="phone">Phone</label>
+                <input class="form-control" id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phoneHelp">
+                <div id="phoneHelp" class="form-text">Optional. Australian mobile or landline.</div>
+                <div class="invalid-feedback">Please enter an Australian number, like 0412 345 678.</div>
+              </div>
+
+              <!-- Enquiry type -->
+              <div class="col-md-6">
+                <label class="form-label" for="enquiryType">What are you enquiring about? <span class="mf-req">*</span></label>
+                <select class="form-select" id="enquiryType" name="enquiryType" required>
+                  <option value="">Choose one</option>
+                  <option value="wedding">Wedding</option>
+                  <option value="event">Event</option>
+                  <option value="bouquet">Bouquet order</option>
+        
+                  <option value="other">Something else</option>
+                </select>
+                <div class="invalid-feedback">Please choose an enquiry type.</div>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label" for="eventDate">Date <span class="mf-req" data-date-req>*</span></label>
+                <input class="form-control" id="eventDate" name="eventDate" type="date">
+                <div class="invalid-feedback" data-date-msg>Please choose a date in the future.</div>
+              </div>
+
+              <!-- Wedding / event details: shown only for those types -->
+              <div class="col-12" data-event-fields hidden>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <label class="form-label" for="venue">Venue or suburb <span class="mf-req">*</span></label>
+                    <input class="form-control" id="venue" name="venue" type="text">
+                    <div class="invalid-feedback">Please tell us where it's happening.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="guests">Number of guests</label>
+                    <input class="form-control" id="guests" name="guests" type="number" min="1" max="1000" inputmode="numeric">
+                    <div class="invalid-feedback">Please enter a number between 1 and 1000.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="budget">Flower budget <span class="mf-req">*</span></label>
+                    <select class="form-select" id="budget" name="budget">
+                      <option value="">Choose a range</option>
+                      <option>Under $1,000</option>
+                      <option>$1,000 – $2,500</option>
+                      <option>$2,500 – $5,000</option>
+                      <option>$5,000 – $10,000</option>
+                      <option>$10,000+</option>
+                      <option>Not sure yet</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose a budget range.</div>
+                  </div>
+                  <fieldset class="col-12" data-services-wrap>
+                    <legend>What would you like? <span class="mf-req">*</span></legend>
+                    <div class="row row-cols-1 row-cols-sm-2 g-2 mt-1">
+                      <div class="col form-check"><input class="form-check-input" type="checkbox" name="services" value="Bridal bouquet" id="s1"><label class="form-check-label" for="s1">Bridal bouquet</label></div>
+                      <div class="col form-check"><input class="form-check-input" type="checkbox" name="services" value="Bridesmaid bouquets" id="s2"><label class="form-check-label" for="s2">Bridesmaid bouquets</label></div>
+                      <div class="col form-check"><input class="form-check-input" type="checkbox" name="services" value="Buttonholes" id="s3"><label class="form-check-label" for="s3">Buttonholes</label></div>
+                      <div class="col form-check"><input class="form-check-input" type="checkbox" name="services" value="Ceremony florals" id="s4"><label class="form-check-label" for="s4">Ceremony florals</label></div>
+                      <div class="col form-check"><input class="form-check-input" type="checkbox" name="services" value="Table centrepieces" id="s5"><label class="form-check-label" for="s5">Table centrepieces</label></div>
+                      <div class="col form-check"><input class="form-check-input" type="checkbox" name="services" value="Statement installation" id="s6"><label class="form-check-label" for="s6">Statement installation</label></div>
+                    </div>
+                    <div class="invalid-feedback d-block mt-2" data-services-msg hidden>Please tick at least one.</div>
+                  </fieldset>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="col-12">
+                <label class="form-label" for="message">Tell us about the vibe <span class="mf-req">*</span></label>
+                <textarea class="form-control" id="message" name="message" rows="5" maxlength="1500" aria-describedby="messageHelp" required></textarea>
+                <div id="messageHelp" class="form-text d-flex justify-content-between gap-3">
+                  <span>Colours, flowers you love, Pinterest links.</span>
+                  <span data-char-count>0 / 1500</span>
+                </div>
+                <div class="invalid-feedback">Please write at least 20 characters so Shannon can picture it.</div>
+              </div>
+
+              <div class="col-md-6">
+                <label class="form-label" for="source">How did you hear about us?</label>
+                <select class="form-select" id="source" name="source">
+                  <option value="">Choose one</option>
+                  <option>Instagram</option>
+                  <option>TikTok</option>
+                  <option>Google</option>
+                  <option>Friend or family</option>
+                  <option>Venue or supplier</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="consent" name="consent" required>
+                  <label class="form-check-label" for="consent">I'm happy for Mars Florals to contact me about this enquiry. <span class="mf-req">*</span></label>
+                  <div class="invalid-feedback">Please tick to let us reply to you.</div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" class="btn-mf-berry" data-submit>Send enquiry</button>
+              </div>
+            </div>
+          </form>
+
+
+          <div class="mf-success" data-success hidden tabindex="-1">
+            <p class="mf-script m-0" style="font-size: 2.5rem;">thank you!</p>
+            <h2 class="mf-display mt-3" style="font-size: clamp(2rem, 4vw, 3.25rem);" data-success-heading>Your enquiry is in</h2>
+            <p class="m-0" style="font-size: 1.25rem;">Thanks <span data-success-name></span>. Shannon will be in touch at <strong data-success-email></strong> soon. In the meantime, have a look at the <a href="faq.html">FAQ</a> or follow along on <a href="https://www.instagram.com/mars.florals" target="_blank" rel="noopener">Instagram</a>.</p>
+            <!-- Shown only when the enquiry went via the visitor's email app (static hosting, no server) -->
+            <p class="mf-sans mt-4 mb-0" style="font-size: 1rem;" data-success-mailto hidden>Your email app should have opened with your enquiry written out. Please press <strong>Send</strong> there so it reaches Shannon. Didn't open? <a href="mailto:marsflorals@outlook.com" data-mailto-link>Try again</a>, or email <a href="mailto:marsflorals@outlook.com">marsflorals@outlook.com</a> directly.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="mf-footer mf-gutter py-4">
+    <div class="d-flex flex-wrap justify-content-between gap-4">
+      <p class="m-0" style="max-width: 35rem; line-height: 1.5;">Mars Florals works on Whadjuk Noongar boodja. We pay our respects to Elders past and present, and acknowledge that sovereignty was never ceded.</p>
+      <nav aria-label="Footer" class="d-flex flex-wrap column-gap-4 align-items-start">
+        <a href="pricing.html">Pricing</a>
+        <a href="faq.html">FAQ</a>
+        <a href="enquire.html">Enquire</a>
+        <a href="https://www.instagram.com/mars.florals" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:marsflorals@outlook.com">Email</a>
+        <span class="py-2">&copy; <span data-year>2026</span> Mars Florals</span>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/enquire.js"></script>
+</body>
+</html>
