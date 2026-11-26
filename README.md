@@ -39,7 +39,57 @@ mars-florals-site/
 3. Open http://localhost:3000
 
 You can open the HTML files directly by double-clicking them. Without the server, the enquiry
-form falls back to email (see below), exactly as it does on GitHub Pages and AWS S3.
+form falls back to email (see below), exactly as it does on the live AWS site.
+
+## Deployment (AWS)
+
+**Live site:** https://www.marsflorals.com.au
+
+The site is hosted as a static website on AWS. The Node.js server is not deployed, so on the live
+site the enquiry form uses the email fallback (see "Enquiry form" below).
+
+```
+Visitor ──HTTPS──▶ CloudFront (CDN, HTTPS certificate) ──private access──▶ S3 bucket (site files)
+                        ▲
+www.marsflorals.com.au ─┘  (DNS at VentraIP: CNAME www → CloudFront)
+```
+
+| Part | Service | Details |
+|---|---|---|
+| File storage | Amazon S3 | Bucket `mars-florals-site-428270342447`, Region ap-southeast-2 (Sydney). Private: all public access is blocked and only CloudFront can read it (Origin Access Control). |
+| Delivery and HTTPS | Amazon CloudFront | Distribution `E19AFZP0BIB5FW` (`dm1vwrqw7zuth.cloudfront.net`). Redirects HTTP to HTTPS, compresses files, caches them at edge locations (visitors in Perth are served from Perth) and adds security headers (HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy). Default page `index.html`. |
+| Certificate | AWS Certificate Manager | Free certificate for `marsflorals.com.au` and `www.marsflorals.com.au`, validated by DNS and renewed automatically. It is in us-east-1 because CloudFront requires that. |
+| Domain | VentraIP | `marsflorals.com.au`, registered and DNS-hosted at VentraIP. |
+
+**Files uploaded:** `index.html`, `pricing.html`, `faq.html`, `enquire.html`, `css/`, `js/` and
+`images/` (32 files). **Not uploaded:** `data/` (customers' personal details), `server.js`,
+`package.json`, `README.md`, `CLAUDE.md` and `.git`.
+
+**DNS records at VentraIP (DNS Hosting):**
+
+| Type | Hostname | Points to | Purpose |
+|---|---|---|---|
+| CNAME | `www` | `dm1vwrqw7zuth.cloudfront.net` | Sends the www address to CloudFront |
+| CNAME | `_0ef9…76c1` | `…acm-validations.aws` | Proves domain ownership for the certificate (keep, needed for renewal) |
+| CNAME | `_bdd6…a929.www` | `…acm-validations.aws` | Same, for the www name |
+
+The bare domain (`marsflorals.com.au`, without www) has no record pointing at the site yet; use the
+www address.
+
+**Updating the live site:**
+1. Upload the changed files to the S3 bucket at the same paths (e.g. `css/styles.css`), with the
+   right content type (`text/html`, `text/css`, `text/javascript`, `image/jpeg`, `image/png`).
+2. In CloudFront, create an invalidation for `/*`. Otherwise visitors can see the old version for up to 24 hours.
+
+**Cost:** $0 a month at this size. The site is about 3 MB, well within the S3 and CloudFront free
+allowances (CloudFront: 1 TB of transfer and 10 million requests a month). The domain is paid
+yearly to VentraIP.
+
+**Deployment checks (24 November 2026):**
+- All four pages, the CSS, the JavaScript and the images load over HTTPS on `www.marsflorals.com.au`
+- `http://` redirects to `https://` (301)
+- `data/enquiries.json` and `server.js` are not reachable on the live site
+- The S3 bucket can't be accessed directly; only through CloudFront
 
 ## Enquiry form
 
